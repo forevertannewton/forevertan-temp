@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forever Tan — Newton, MA</title>
+  <style>
+    :root{
+      --tan:#e6d3c3;
+      --brown:#6b3f2a;
+      --muted:#f8f6f4;
+      --accent:#caa57a;
+      --btn-shadow: 0 6px 18px rgba(107,63,42,0.12);
+      --max-width:960px;
+      --radius:14px;
+      --glass: rgba(255,255,255,0.7);
+      font-family: "Helvetica Neue", Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Liberation Sans", sans-serif;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background:linear-gradient(180deg, #ffffff 0%, #fbfaf9 60%);
+      color:var(--brown);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--max-width);
+      background: white;
+      border-radius:18px;
+      box-shadow: 0 10px 30px rgba(40,30,20,0.06);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:0;
+    }
+
+    /* top area -- centered content */
+    .hero{
+      padding:36px 28px 28px;
+      text-align:center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+    }
+
+    .logo{
+      max-width:360px;
+      width:72%;
+      height:auto;
+      margin:0 auto 18px auto;
+    }
+
+    .tagline{
+      margin:0 0 22px 0;
+      color: #8a6a52;
+      font-size:18px;
+      font-weight:600;
+    }
+
+    .buttons{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 18px;
+      max-width:420px;
+      width:100%;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      border-radius:12px;
+      padding:14px 18px;
+      min-height:48px;
+      width:100%;
+      box-sizing:border-box;
+      font-weight:700;
+      letter-spacing:0.2px;
+      box-shadow: var(--btn-shadow);
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+
+    .btn-primary{
+      background: linear-gradient(90deg, var(--tan), var(--accent));
+      color:white;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .btn-primary:hover{ transform:translateY(-3px); box-shadow: 0 10px 22px rgba(107,63,42,0.18); }
+
+    .btn-outline{
+      background: transparent;
+      color: var(--brown);
+      border: 1.4px solid rgba(107,63,42,0.12);
+    }
+    .btn-outline:hover{ transform:translateY(-3px); box-shadow: 0 10px 22px rgba(107,63,42,0.08); }
+
+    .small-actions{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      margin-top:6px;
+      flex-wrap:wrap;
+    }
+
+    .instagram {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--brown);
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 12px;
+      border-radius:10px;
+      border:1px solid rgba(107,63,42,0.06);
+      background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(250,246,244,0.6));
+    }
+
+    /* image panel */
+    .image-panel{
+      display:flex;
+      gap:12px;
+      padding:18px;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(180deg, #fffaf9, #fffdfc);
+      flex-wrap:wrap;
+    }
+
+    .image-panel img{
+      border-radius:12px;
+      max-width:46%;
+      width:420px;
+      height:auto;
+      object-fit:cover;
+      box-shadow: 0 8px 26px rgba(20,18,16,0.06);
+      border:1px solid rgba(0,0,0,0.03);
+    }
+
+    /* contact footer */
+    .contact{
+      padding:20px 28px 36px;
+      text-align:center;
+      color: #5b4132;
+      font-size:15px;
+      line-height:1.4;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.98));
+    }
+
+    .contact a { color:var(--brown); text-decoration:none; font-weight:700; }
+    .contact .muted { color:#7f6a5a; font-weight:600; display:block; margin-top:6px; font-size:14px; }
+
+    /* layout responsive tweaks */
+    @media (max-width:720px){
+      .image-panel img{ max-width:100%; width:100%; }
+      .logo{ width:82%; max-width:280px; }
+      .btn{ padding:12px 14px; }
+      .hero{ padding:28px 18px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="site-title">
+      <section class="hero" aria-label="Forever Tan Newton">
+        <img src="ft-logo-2023-white-bg.png" alt="Forever Tan - Premium Sun and Sunless" class="logo" />
+        <p class="tagline">Premium Sun & Sunless — Newton Highlands, MA</p>
+
+        <div class="buttons" role="navigation" aria-label="Booking links">
+          <a class="btn btn-primary" href="https://book.squareup.com/appointments/axltjicdiru9y7/location/EJK5GPTHE84E7/services" target="_blank" rel="noopener noreferrer">
+            Book Airbrush Tan
+          </a>
+
+          <a class="btn btn-primary" href="https://forevertansalons.setster.com/" target="_blank" rel="noopener noreferrer">
+            Book UV / Versa Spa
+          </a>
+
+          <a class="btn btn-outline" href="https://www.instagram.com/forevertannewton/?hl=en" target="_blank" rel="noopener noreferrer">
+            View Instagram
+          </a>
+
+          <div class="small-actions" aria-hidden="false">
+            <a class="instagram" href="tel:+16179690780">📞 (617) 969-0780</a>
+            <a class="instagram" href="mailto:forevertannewton@gmail.com">✉️ forevertannewton@gmail.com</a>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="image-panel" aria-label="Gallery images">
+        <!-- Main collage + VersaSpa -->
+        <img src="Dark Background Retro Film Festival Photo Collage.png" alt="Collage of tanning beds and tanning bottles" />
+        <img src="spray-tanning-booth.png" alt="VersaSpa spray tanning booth" />
+      </section>
+
+      <footer class="contact" aria-label="Contact information">
+        <div id="site-title" style="display:none">Forever Tan Newton</div>
+        <div style="font-weight:800; font-size:16px; color:var(--brown); margin-bottom:8px;">
+          LOCATION
+        </div>
+
+        <div style="font-weight:700; font-size:15px; color:var(--brown);">
+          56 Winchester St, Suite 6, Newton Highlands, MA 02461
+        </div>
+
+        <div class="muted">Monday–Friday: 10am–8pm • Saturday: 9am–5pm • Sunday: 11am–4pm</div>
+
+        <div style="margin-top:14px; font-size:14px;">
+          <a href="https://www.google.com/maps/search/?api=1&query=56+Winchester+St+Newton+MA" target="_blank" rel="noopener noreferrer">Get directions</a>
+          <span style="margin:0 8px; color:#d9c2aa;">•</span>
+          <a href="https://book.squareup.com/appointments/axltjicdiru9y7/location/EJK5GPTHE84E7/services" target="_blank" rel="noopener noreferrer">Book Airbrush</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
